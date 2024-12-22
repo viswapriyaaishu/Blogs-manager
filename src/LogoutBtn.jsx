@@ -8,10 +8,11 @@ function LogoutBtn() {
     const {navigate}=useNavigate()
     const logos=()=>
     {
-        authobj.logout().then(
-            dispatch(logout()),
+        authobj.logout().then(()=>
+        {
+          dispatch(logout()),
             navigate("/login")
-        )
+        })
     }
   return (
     <button onClick={logos} className="text-white hover:bg-blue-400 rounded-lg px-2">
