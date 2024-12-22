@@ -56,7 +56,7 @@ function Header() {
             </div>
             <div className="navubaru">
 
-            <ul className={open?"khula":""} text-white>
+            <ul className={`${open?"khula":""} text-white bg-black`}>
                 {nait.map((it)=>
                 (
                     it.active && (<li key={it.name}>
