@@ -10,8 +10,8 @@ function LogoutBtn() {
     {
         authobj.logout().then(()=>
         {
-          dispatch(logout()),
-            navigate("/login")
+          dispatch(logout());
+            navigate("/login");
         })
     }
   return (
