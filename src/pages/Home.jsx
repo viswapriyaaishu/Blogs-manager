@@ -6,7 +6,7 @@ function Home() {
     const [posts,setposts]=useState([])
     useEffect(()=>{
         authob.getposts().then((post)=>
-        {console.log(post);
+        {
           setposts(post.documents)
 
         }).catch(error=>{

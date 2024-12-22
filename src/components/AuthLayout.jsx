@@ -7,7 +7,7 @@ const navigate=useNavigate()
 const authstate=useSelector(state=>state.auth.status)
 
 useEffect(()=>{
-  console.log("Auth State:", authstate, "Authentication:", authentication);
+ 
 if(loader)
 {if(authentication && !authstate)
 {

@@ -1,10 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {useSelector} from 'react-redux'
 import { authSlice } from '../store/authSlice'
 import {Link,useNavigate} from 'react-router-dom'
 import Logo from './Logo'
 import LogoutBtn from '../LogoutBtn'
 import Container from './Container'
+import '../index.css'
 function Header() {
     const authStatus=useSelector((state)=>(state.auth.status))
     
@@ -36,27 +37,38 @@ function Header() {
             active:authStatus
         }
     ]
+
+    const [open,setopen]=useState(false)
+   
   return (
     <div>
     <header>
     <Container className="w-full">
         
-        <nav className="flex text-white gap-3 justify-center bg-black ">
+        <nav className=" text-white bg-black ">
             <div>
                 <Link to='/'><Logo></Logo></Link>
             </div>
+            <div className="menu text-white" onClick={()=>{setopen(!open)}}>
+                <div className="men-line"></div>
+                <div className="men-line"></div>
+                <div className="men-line"></div>
+            </div>
+            <div className="navubaru">
 
-            <ul className="flex gap-3">
+            <ul className={open?"khula":""} text-white>
                 {nait.map((it)=>
                 (
                     it.active && (<li key={it.name}>
                         <button className="hover:bg-blue-400 rounded-lg px-2" onClick={()=>{navigate(it.slug)}}>{it.name}</button>
                     </li>)
                 ))}
-            </ul>
-            {
-                authStatus && <LogoutBtn></LogoutBtn>
+                 {
+                authStatus && <li><LogoutBtn></LogoutBtn></li>
             }
+            </ul>
+           
+            </div>
         </nav>
       </Container>
     </header>

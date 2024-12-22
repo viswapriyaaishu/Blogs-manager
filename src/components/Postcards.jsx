@@ -3,6 +3,8 @@ import {useSelector} from 'react-redux'
 import authob from '../appwrite/conf'
 import {Link,useNavigate} from 'react-router-dom' 
 function Postcard({$id,title,featuredImage}) {
+  
+
   return (
     <div>
       <Link to={`/post/${$id}`}>

@@ -1,3 +1,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.men-line
+{
+    height:0.5vh;
+    width:4vw;
+    background-color: white;
+    border-radius:10px;
+    display:none;
+    
+}
+.menu{
+    position:absolute;
+    top:4px;
+    left:300px;
+    
+    display:none;
+    flex-direction:column;
+
+}
+nav{
+    display:flex;
+    gap:2px;
+    background-color: black;
+    
+    align-items:center;
+}
+.navubaru ul{
+display:flex;
+flex-direction:row;
+gap:3px;
+height:18vh;
+position:absolute;
+left:257px;
+top:25px;
+background-color:black;
+}
+
+@media(max-width:440px)
+{
+.menu{
+    display:flex;
+   
+    }
+.men-line{
+    display:block;
+  
+}
+.navubaru ul
+{
+        display:none;
+        flex-direction:column;
+        gap:2px;
+        align-items:start;
+        margin-left:15px;
+        text-align:center;
+}
+    
+
+    .navubaru ul.khula
+    {
+        display:flex;
+        
+    }
+}
+
+

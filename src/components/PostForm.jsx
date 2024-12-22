@@ -7,7 +7,7 @@ import {Input,Button,Select,Protecto} from './index'
 function PostForm({post}) {
     const navigate=useNavigate()
     const userData=useSelector(state=>state.auth.userData)
-    console.log("UserData:", userData);
+    
     const {register,handleSubmit,watch,setValue,control,getValues}=useForm({
         defaultValues:
         {

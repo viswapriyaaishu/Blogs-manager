@@ -26,7 +26,7 @@ function App() {
 
   return (
    !loading?(
-    <div className="mx-auto bg-gray-300 w-[80vw] h-screen">
+    <div className="mx-auto bg-gray-300 w-[80vw] min-h-screen">
      <Header></Header>
      <main><Outlet></Outlet></main>
      <Footer></Footer>

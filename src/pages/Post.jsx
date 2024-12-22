@@ -13,9 +13,9 @@ function Post() {
     const isauthor= post && userdata ? post.userId === userdata.$id: false
     const navigate=useNavigate();
     const del=()=>
-    {console.log('Delete button clicked for post:', post.$id);
+    {
         authob.deletePost(post.$id).then((status)=>
-        {console.log('Deleting associated file:', post.featuredImage);
+        {
             if(status){authob.deletefile(post.featuredImage)}
             else{navigate("/")}
         })
@@ -24,17 +24,13 @@ function Post() {
     {
         if(slug){authob.getpost(slug)
           .then((post)=>{if(post)
-        {console.log(post);
+        {
           setpost(post)} else{navigate("/")}})}
         else{navigate("/")}
         
     },[slug,navigate])
 
-    useEffect(() => {
-      console.log('User Data:', userdata);
-      console.log('Post Data:', post);
-      console.log('Is Author (post.userId === userdata.$id):', isauthor);
-  }, [userdata, post, isauthor]);
+  
     if (!post) {
       return <div>Loading...</div>;}
   return (

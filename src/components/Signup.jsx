@@ -14,9 +14,9 @@ function Signup() {
     const signu=async(data)=>
     {seterror("")
         try{
-          console.log("Signup form data:", data);
+          
             const session=await authobj.createlogin({email:data.email,password:data.password,name:data.name})
-            console.log("Signup response:", session);
+           
         if(session)
         {
             const userData= await authobj.getLogin()
