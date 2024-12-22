@@ -5,7 +5,7 @@ import authobj from './appwrite/auth.js'
 import {useNavigate} from 'react-router-dom'
 function LogoutBtn() {
     const dispatch=useDispatch()
-    const {navigate}=useNavigate()
+    const navigate=useNavigate()
     const logos=()=>
     {
         authobj.logout().then(()=>
