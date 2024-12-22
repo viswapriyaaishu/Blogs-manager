@@ -1,0 +1,34 @@
+.but
+{display:flex;
+gap:2px;
+padding-top:4px;
+    
+}
+.d1
+{display:flex;
+    justify-content:center;
+    padding-top:2px;
+    gap:2px;
+    padding-left:7px;
+    
+}
+
+@media(max-width:1246px)
+{
+    .but{
+        display:flex;
+        flex-direction:row;
+        margin-left:4px;
+        gap:15px;
+    }
+    .img1
+    {
+        height:100px;
+        width:320px;
+    }
+    .d1{
+        display:flex;
+        flex-direction: column;
+        gap:2px;
+    }
+}

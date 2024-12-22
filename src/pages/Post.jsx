@@ -4,7 +4,7 @@ import {useParams,useNavigate,Link} from 'react-router-dom'
 import authob from '../appwrite/conf'
 import { Container,Postcard,Button } from '../components/index'
 import parse from "html-react-parser"
-
+import '../../src/App.css'
 import EditPost from './EditPost'
 function Post() {
     const [post,setpost]=useState(null)
@@ -37,11 +37,11 @@ function Post() {
     <div className="flex flex-col items-center">
       
         <Container className="flex flex-row  gap-3 justify-center">
-          <div className="flex justify-center pt-2 gap-2 pl-7">
-         <img src={authob.getfilepreview(post.featuredImage)} alt={post.title} style={{height:"500px"}}></img>
+          <div className="d1">
+         <img src={authob.getfilepreview(post.featuredImage)} alt={post.title} style={{height:"500px"}} className="img1"></img>
         {
         isauthor && (<div>
-           <div className="flex gap-2 pt-4">
+           <div className="but">
            <Link to={`/editpost/${post.$id}`}>
             <Button className="bg-green-500 px-2 text-white rounded-lg">Edit</Button>
         </Link>

@@ -3,6 +3,7 @@ import {useDispatch} from 'react-redux'
 import { logout } from './store/authSlice.js'
 import authobj from './appwrite/auth.js'
 import {useNavigate} from 'react-router-dom'
+
 function LogoutBtn() {
     const dispatch=useDispatch()
     const navigate=useNavigate()
