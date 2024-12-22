@@ -47,7 +47,7 @@ function Header() {
         
         <nav className=" text-white bg-black ">
             <div>
-                <Link to='/'><Logo></Logo></Link>
+                <Link to='/'><Logo className="mx-2"></Logo></Link>
             </div>
             <div className="menu text-white" onClick={()=>{setopen(!open)}}>
                 <div className="men-line"></div>

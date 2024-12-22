@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Logo() {
+function Logo({... props}) {
   return (
     <div>
-      <b>LOGO</b>
+      <b {...props}>LOGO</b>
     </div>
   )
 }
